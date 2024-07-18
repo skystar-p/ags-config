@@ -1,28 +1,29 @@
 import { forMonitors } from "utils/utils";
+import Bar from "widgets/bar/Bar";
 
-const time = Variable("", {
-  poll: [1000, function() {
-    return Date().toString();
-  }],
-});
+// const time = Variable("", {
+//   poll: [1000, function() {
+//     return Date().toString();
+//   }],
+// });
 
-const Bar = (/** @type {number} */ monitor) =>
-  Widget.Window({
-    monitor,
-    name: `bar${monitor}`,
-    anchor: ["top", "left", "right"],
-    exclusivity: "exclusive",
-    child: Widget.CenterBox({
-      start_widget: Widget.Label({
-        hpack: "center",
-        label: "Welcome to AGS!",
-      }),
-      end_widget: Widget.Label({
-        hpack: "center",
-        label: time.bind(),
-      }),
-    }),
-  });
+// const Bar = (/** @type {number} */ monitor) =>
+//   Widget.Window({
+//     monitor,
+//     name: `bar${monitor}`,
+//     anchor: ["top", "left", "right"],
+//     exclusivity: "exclusive",
+//     child: Widget.CenterBox({
+//       start_widget: Widget.Label({
+//         hpack: "center",
+//         label: "Welcome to AGS!",
+//       }),
+//       end_widget: Widget.Label({
+//         hpack: "center",
+//         label: time.bind(),
+//       }),
+//     }),
+//   });
 
 App.config({
   style: "./main.css",
