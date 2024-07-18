@@ -21,6 +21,7 @@ const centerWidget: Array<BarWidget> = [
 
 const endWidget: Array<BarWidget> = [
   "systray",
+  "system",
 ];
 
 export type BarWidget = keyof typeof widget;
@@ -33,7 +34,7 @@ const widget = {
   // media: Media,
   // powermenu: PowerMenu,
   systray: SysTray,
-  // system: SystemIndicators,
+  system: SystemIndicators,
   // taskbar: Taskbar,
   workspaces: Workspaces,
   // screenrecord: ScreenRecord,
