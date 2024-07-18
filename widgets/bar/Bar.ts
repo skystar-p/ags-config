@@ -37,7 +37,7 @@ const widget = {
   // taskbar: Taskbar,
   workspaces: Workspaces,
   // screenrecord: ScreenRecord,
-  // messages: Messages,
+  messages: Messages,
   // expander: () => Widget.Box({ expand: true }),
 };
 
@@ -47,7 +47,7 @@ export default (monitor: number) =>
     class_name: "bar",
     name: `bar${monitor}`,
     exclusivity: "exclusive",
-    anchor: ["right", "left"],
+    anchor: ["top", "left", "right"],
     child: Widget.CenterBox({
       css: "min-width: 2px; min-height: 2px;",
       startWidget: Widget.Box({
@@ -59,6 +59,7 @@ export default (monitor: number) =>
         children: centerWidget.map(w => widget[w]()),
       }),
       endWidget: Widget.Box({
+        hpack: "end",
         hexpand: true,
         children: endWidget.map(w => widget[w]()),
       }),
