@@ -1,6 +1,7 @@
 import { forMonitors } from "utils/utils";
 import Bar from "widgets/bar/Bar";
 import { setupDateMenu } from "widgets/datemenu/DateMenu";
+import { setupQuickSettings } from "widgets/quicksettings/QuickSettings";
 
 // const time = Variable("", {
 //   poll: [1000, function() {
@@ -28,6 +29,7 @@ import { setupDateMenu } from "widgets/datemenu/DateMenu";
 
 App.config({
   onConfigParsed: () => {
+    setupQuickSettings();
     setupDateMenu();
   },
 

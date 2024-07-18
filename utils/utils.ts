@@ -1,31 +1,32 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { type Application } from "types/service/applications";
-// import icons, { substitutes } from "./icons"
 import Gdk from "gi://Gdk";
 import GLib from "gi://GLib?version=2.0";
 import Gtk from "gi://Gtk?version=3.0";
+import { type Application } from "types/service/applications";
+import icons, { substitutes } from "./icons";
 
 export type Binding<T> = import("types/service").Binding<any, any, T>;
 
 /**
  * @returns substitute icon || name || fallback icon
  */
-/*
 export function icon(name: string | null, fallback = icons.missing) {
-    if (!name)
-        return fallback || ""
+  if (!name) {
+    return fallback || "";
+  }
 
-    if (GLib.file_test(name, GLib.FileTest.EXISTS))
-        return name
+  if (GLib.file_test(name, GLib.FileTest.EXISTS)) {
+    return name;
+  }
 
-    const icon = (substitutes[name] || name)
-    if (Utils.lookUpIcon(icon))
-        return icon
+  const icon = substitutes[name] || name;
+  if (Utils.lookUpIcon(icon)) {
+    return icon;
+  }
 
-    print(`no icon substitute "${icon}" for "${name}", fallback: "${fallback}"`)
-    return fallback
+  print(`no icon substitute "${icon}" for "${name}", fallback: "${fallback}"`);
+  return fallback;
 }
-*/
 
 /**
  * @returns execAsync(["bash", "-c", cmd])

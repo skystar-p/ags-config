@@ -1,7 +1,8 @@
-import icons from "lib/icons.js";
-import { dependencies, icon, sh } from "lib/utils";
 import { type Stream } from "types/service/audio";
+import icons from "utils/icons.js";
+import { dependencies, icon, sh } from "utils/utils";
 import { Arrow, Menu } from "../ToggleButton";
+
 const audio = await Service.import("audio");
 
 type Type = "microphone" | "speaker";

@@ -1,11 +1,15 @@
-import icons from "lib/icons";
-import { icon } from "lib/utils";
-import options from "options";
 import { type MprisPlayer } from "types/service/mpris";
+import icons from "utils/icons";
+import { icon } from "utils/utils";
 import PanelButton from "../PanelButton";
 
 const mpris = await Service.import("mpris");
-const { length, direction, preferred, monochrome, format } = options.bar.media;
+
+const length = Variable(40);
+const direction = Variable("right");
+const preferred = Variable("Mozilla Firefox");
+const monochrome = Variable(false);
+const format = Variable("{artists} - {title}");
 
 const getPlayer = (name = preferred.value) => mpris.getPlayer(name) || mpris.players[0] || null;
 
@@ -13,6 +17,7 @@ const Content = (player: MprisPlayer) => {
   const revealer = Widget.Revealer({
     click_through: true,
     visible: length.bind().as(l => l > 0),
+    // @ts-ignore
     transition: direction.bind().as(d => `slide_${d}` as const),
     setup: self => {
       let current = "";
