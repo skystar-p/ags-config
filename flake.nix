@@ -13,8 +13,9 @@
     {
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
-          pnpm
           nodejs
+          pnpm
+          bun
           dprint
         ];
       };

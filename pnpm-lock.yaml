@@ -8,11 +8,32 @@ importers:
 
   .:
     devDependencies:
+      '@girs/accountsservice-1.0':
+        specifier: 1.0.0-4.0.0-beta.6
+        version: 1.0.0-4.0.0-beta.6
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
 
 packages:
+
+  '@girs/accountsservice-1.0@1.0.0-4.0.0-beta.6':
+    resolution: {integrity: sha512-3SZKLfcmyvlLKh64EPmgC7Ft0FCXmaieQzoYTNKd2KmxtJ5ouUSu2+9pdTNyBivxF+otLTdWWhHzCN3cGWSGtw==}
+
+  '@girs/gio-2.0@2.80.3-4.0.0-beta.6':
+    resolution: {integrity: sha512-bTbiLWyQ5hqY8E8jL5TofE9xPpJhJSR74FguGaxbYtOmdBD/LQg8hBNHWFPzqkdYMV0k7B62724Wg7kxGJ4DnA==}
+
+  '@girs/gjs@4.0.0-beta.6':
+    resolution: {integrity: sha512-j9IXtL8Cw8FMts9r5YodRPCeqL0qqgTQOoln3A4vY0RMA3Fcg6Sa19eD6wFd11l1jvPKCYdR2CgcBMV13mPVjg==}
+
+  '@girs/glib-2.0@2.80.3-4.0.0-beta.6':
+    resolution: {integrity: sha512-L2RIJ24uoWtaV6wfRbrzk5yCWcaFfbnapxh74HRWkPTgWdnm62uqCrze9W8Wrbj9UvZazHaaBGlIB8ab4NeYSw==}
+
+  '@girs/gmodule-2.0@2.0.0-4.0.0-beta.6':
+    resolution: {integrity: sha512-lwKyqXkLRRInlyx7yEQg7mCH3q3Vy2Fmq0iKudk2mmD/QZ4v0+eEbKfzOg+Wves0ImIcxmOZZ33Ga9oLEwIKtQ==}
+
+  '@girs/gobject-2.0@2.80.3-4.0.0-beta.6':
+    resolution: {integrity: sha512-NqtWAU/Vo3iZELbp40flEfs9tfouW3sPKzwDomJCJNyJxgCnsZKPgmxUMj9wV7ub77egiQclrjaGwzVOt8XTSA==}
 
   typescript@5.5.3:
     resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
@@ -20,5 +41,42 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@girs/accountsservice-1.0@1.0.0-4.0.0-beta.6':
+    dependencies:
+      '@girs/gio-2.0': 2.80.3-4.0.0-beta.6
+      '@girs/gjs': 4.0.0-beta.6
+      '@girs/glib-2.0': 2.80.3-4.0.0-beta.6
+      '@girs/gmodule-2.0': 2.0.0-4.0.0-beta.6
+      '@girs/gobject-2.0': 2.80.3-4.0.0-beta.6
+
+  '@girs/gio-2.0@2.80.3-4.0.0-beta.6':
+    dependencies:
+      '@girs/gjs': 4.0.0-beta.6
+      '@girs/glib-2.0': 2.80.3-4.0.0-beta.6
+      '@girs/gmodule-2.0': 2.0.0-4.0.0-beta.6
+      '@girs/gobject-2.0': 2.80.3-4.0.0-beta.6
+
+  '@girs/gjs@4.0.0-beta.6':
+    dependencies:
+      '@girs/gio-2.0': 2.80.3-4.0.0-beta.6
+      '@girs/glib-2.0': 2.80.3-4.0.0-beta.6
+      '@girs/gobject-2.0': 2.80.3-4.0.0-beta.6
+
+  '@girs/glib-2.0@2.80.3-4.0.0-beta.6':
+    dependencies:
+      '@girs/gjs': 4.0.0-beta.6
+      '@girs/gobject-2.0': 2.80.3-4.0.0-beta.6
+
+  '@girs/gmodule-2.0@2.0.0-4.0.0-beta.6':
+    dependencies:
+      '@girs/gjs': 4.0.0-beta.6
+      '@girs/glib-2.0': 2.80.3-4.0.0-beta.6
+      '@girs/gobject-2.0': 2.80.3-4.0.0-beta.6
+
+  '@girs/gobject-2.0@2.80.3-4.0.0-beta.6':
+    dependencies:
+      '@girs/gjs': 4.0.0-beta.6
+      '@girs/glib-2.0': 2.80.3-4.0.0-beta.6
 
   typescript@5.5.3: {}

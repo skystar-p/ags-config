@@ -3,7 +3,8 @@
   },
   "excludes": [
     "**/node_modules",
-    ".next"
+    ".next",
+    "dist"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.90.5.wasm"

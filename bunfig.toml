@@ -1,0 +1,4 @@
+[build]
+entry = "config.js"
+outdir = "dist"
+outfile = "main.js"
