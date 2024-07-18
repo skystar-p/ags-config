@@ -48,7 +48,7 @@
 
     button.close-button {
         @include button($flat: true);
-        margin-left: $spacing / 2;
+        margin-left: calc($spacing / 2);
         border-radius: $radius*0.8;
         min-width: 1.2em;
         min-height: 1.2em;
