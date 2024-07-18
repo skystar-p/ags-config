@@ -1,0 +1,11 @@
+{
+  "typescript": {
+  },
+  "excludes": [
+    "**/node_modules",
+    ".next"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.90.5.wasm"
+  ]
+}
