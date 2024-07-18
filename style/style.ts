@@ -30,7 +30,7 @@ const options = {
     },
 
     blur: 0,
-    scheme: <"dark" | "light">("dark"),
+    scheme: <"dark" | "light"> ("dark"),
     widget: { opacity: 94 },
     border: {
       width: 1,
@@ -112,7 +112,8 @@ export const variables = () => [
 
   $(
     "active-gradient",
-    `linear-gradient(to right, ${t(dark.primary.bg, light.primary.bg)}, darken(${t(dark.primary.bg, light.primary.bg)
+    `linear-gradient(to right, ${t(dark.primary.bg, light.primary.bg)}, darken(${
+      t(dark.primary.bg, light.primary.bg)
     }, 4%))`,
   ),
   $("shadow-color", t("rgba(0,0,0,.6)", "rgba(0,0,0,.4)")),
