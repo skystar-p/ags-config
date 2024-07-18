@@ -1,7 +1,6 @@
 import icons from "utils/icons";
 import PanelButton from "../PanelButton";
 
-
 const n = await Service.import("notifications");
 const notifs = n.bind("notifications");
 const action = () => App.toggleWindow("datemenu");

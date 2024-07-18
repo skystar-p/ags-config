@@ -1,18 +1,20 @@
-import icons from "lib/icons";
-import options from "options";
 import { type Notification as Notif } from "types/service/notifications";
-import Notification from "widget/notifications/Notification";
+import icons from "utils/icons";
+import Notification from "widgets/notifications/Notification";
 
 const notifications = await Service.import("notifications");
 const notifs = notifications.bind("notifications");
 
+const transition = 200;
+const notification_width = 440;
+
 const Animated = (n: Notif) =>
   Widget.Revealer({
-    transition_duration: options.transition.value,
+    transition_duration: transition,
     transition: "slide_down",
     child: Notification(n),
     setup: self =>
-      Utils.timeout(options.transition.value, () => {
+      Utils.timeout(transition, () => {
         if (!self.is_destroyed) {
           self.reveal_child = true;
         }
@@ -58,7 +60,7 @@ const NotificationList = () => {
     const n = map.get(id);
     if (n) {
       n.reveal_child = false;
-      Utils.timeout(options.transition.value, () => {
+      Utils.timeout(transition, () => {
         n.destroy();
         map.delete(id);
       });
@@ -100,7 +102,7 @@ const Placeholder = () =>
 export default () =>
   Widget.Box({
     class_name: "notifications",
-    css: options.notifications.width.bind().as(w => `min-width: ${w}px`),
+    css: `min-width: ${notification_width}px`,
     vertical: true,
     children: [
       Header(),

@@ -1,5 +1,4 @@
 import type Gtk from "gi://Gtk?version=3.0";
-import options from "options";
 import { type EventBoxProps } from "types/widgets/eventbox";
 import { type RevealerProps } from "types/widgets/revealer";
 import { type WindowProps } from "types/widgets/window";
@@ -12,6 +11,8 @@ type PopupWindowProps = Omit<WindowProps, "name"> & {
   layout?: keyof ReturnType<typeof Layout>;
   transition?: Transition;
 };
+
+const transition = 200;
 
 export const Padding = (name: string, {
   css = "",
@@ -39,7 +40,7 @@ const PopupRevealer = (
         class_name: "window-content",
         child,
       }),
-      transitionDuration: options.transition.bind(),
+      transitionDuration: transition,
       setup: self =>
         self.hook(App, (_, wname, visible) => {
           if (wname === name) {

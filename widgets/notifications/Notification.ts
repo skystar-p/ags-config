@@ -1,6 +1,6 @@
 import GLib from "gi://GLib";
-import icons from "lib/icons";
 import { type Notification } from "types/service/notifications";
+import icons from "utils/icons";
 
 const time = (time: number, format = "%H:%M") =>
   GLib.DateTime

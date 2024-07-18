@@ -1,4 +1,4 @@
-import { clock, uptime } from "lib/variables";
+import { clock, uptime } from "utils/variables";
 
 function up(up: number) {
   const h = Math.floor(up / 60);

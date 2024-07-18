@@ -1,11 +1,10 @@
-import options from "options";
 import PopupWindow from "widgets/PopupWindow";
 import DateColumn from "./DateColumn";
 import NotificationColumn from "./NotificationColumn";
 
-const { bar, datemenu } = options;
-const pos = bar.position.bind();
-const layout = Utils.derive([bar.position, datemenu.position], (bar, qs) => `${bar}-${qs}` as const);
+const pos = Variable("top");
+const datemenuPos = Variable("center");
+const layout = Utils.derive([pos, datemenuPos], (bar, qs) => `${bar}-${qs}` as const);
 
 const Settings = () =>
   Widget.Box({
@@ -22,7 +21,8 @@ const DateMenu = () =>
   PopupWindow({
     name: "datemenu",
     exclusivity: "exclusive",
-    transition: pos.as(pos => pos === "top" ? "slide_down" : "slide_up"),
+    transition: pos.bind().as(pos => pos === "top" ? "slide_down" : "slide_up"),
+    // @ts-ignore
     layout: layout.value,
     child: Settings(),
   });

@@ -1,5 +1,6 @@
 import { forMonitors } from "utils/utils";
 import Bar from "widgets/bar/Bar";
+import { setupDateMenu } from "widgets/datemenu/DateMenu";
 
 // const time = Variable("", {
 //   poll: [1000, function() {
@@ -26,6 +27,10 @@ import Bar from "widgets/bar/Bar";
 //   });
 
 App.config({
+  onConfigParsed: () => {
+    setupDateMenu();
+  },
+
   style: "./main.css",
   windows: forMonitors(Bar),
 });
