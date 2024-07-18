@@ -1,4 +1,4 @@
-import { forMonitors } from "src/utils/utils";
+import { forMonitors } from "utils/utils";
 
 const time = Variable("", {
   poll: [1000, function() {
