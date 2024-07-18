@@ -17,6 +17,7 @@
           pnpm
           bun
           dprint
+          dart-sass
         ];
       };
     }

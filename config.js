@@ -25,5 +25,6 @@ const Bar = (/** @type {number} */ monitor) =>
   });
 
 App.config({
+  style: './main.css',
   windows: forMonitors(Bar),
 });
