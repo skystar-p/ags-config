@@ -1,9 +1,7 @@
 import options from "options";
-import { CpuGraph, MemGraph } from "widgets/Graph";
 import BatteryBar from "./buttons/BatteryBar";
 import ColorPicker from "./buttons/ColorPicker";
 import Date from "./buttons/Date";
-import Launcher from "./buttons/Launcher";
 import Media from "./buttons/Media";
 import Messages from "./buttons/Messages";
 import PowerMenu from "./buttons/PowerMenu";
@@ -19,11 +17,10 @@ const { transparent, position } = options.bar;
 export type BarWidget = keyof typeof widget;
 
 const widget = {
-  // battery: BatteryBar,
+  battery: BatteryBar,
   // colorpicker: ColorPicker,
   date: Date,
-  // launcher: Launcher,
-  // media: Media,
+  media: Media,
   // powermenu: PowerMenu,
   systray: SysTray,
   system: SystemIndicators,
@@ -31,7 +28,7 @@ const widget = {
   workspaces: Workspaces,
   // screenrecord: ScreenRecord,
   messages: Messages,
-  // expander: () => Widget.Box({ expand: true }),
+  expander: () => Widget.Box({ expand: true }),
 };
 
 export default (monitor: number) =>

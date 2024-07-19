@@ -6,7 +6,6 @@ import { forMonitors } from "utils/utils";
 import Bar from "widgets/bar/Bar";
 import ScreenCorners from "widgets/bar/ScreenCorners";
 import { setupDateMenu } from "widgets/datemenu/DateMenu";
-import Launcher from "widgets/launcher/Launcher";
 import NotificationPopups from "widgets/notifications/NotificationPopups";
 import OSD from "widgets/osd/OSD";
 import Overview from "widgets/overview/Overview";
@@ -22,7 +21,6 @@ App.config({
     init();
   },
   closeWindowDelay: {
-    // "launcher": options.transition.value,
     "overview": options.transition.value,
     "quicksettings": options.transition.value,
     "datemenu": options.transition.value,
@@ -32,7 +30,6 @@ App.config({
     ...forMonitors(NotificationPopups),
     ...forMonitors(ScreenCorners),
     ...forMonitors(OSD),
-    Launcher(),
     Overview(),
     // PowerMenu(),
     SettingsDialog(),
