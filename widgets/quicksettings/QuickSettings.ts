@@ -51,8 +51,10 @@ const Settings = () =>
         ],
       }),
       Row(
-        [NetworkToggle, BluetoothToggle],
-        [WifiSelection, BluetoothDevices],
+        // [NetworkToggle, BluetoothToggle],
+        [BluetoothToggle],
+        // [WifiSelection, BluetoothDevices],
+        [BluetoothDevices],
       ),
       Row(
         [DarkModeToggle],
