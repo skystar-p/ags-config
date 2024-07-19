@@ -35,8 +35,6 @@ class CPU extends Service {
       return this;
     }
 
-    this.notify("ncores");
-
     Utils.interval(interval.value, () => {
       this.updateUsage();
       this.notify("usage");
