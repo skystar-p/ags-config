@@ -1,5 +1,5 @@
-import icons from "lib/icons";
 import options from "options";
+import icons from "utils/icons";
 import RegularWindow from "widget/RegularWindow";
 import layout from "./layout";
 

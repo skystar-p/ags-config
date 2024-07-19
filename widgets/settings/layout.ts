@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
-import icons from "lib/icons";
 import options from "options";
+import icons from "utils/icons";
 import Group from "./Group";
 import Page from "./Page";
 import Row from "./Row";

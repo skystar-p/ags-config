@@ -1,3 +1,4 @@
+import options from "options";
 import BatteryBar from "./buttons/BatteryBar";
 import ColorPicker from "./buttons/ColorPicker";
 import Date from "./buttons/Date";
@@ -11,18 +12,8 @@ import SysTray from "./buttons/SysTray";
 import Taskbar from "./buttons/Taskbar";
 import Workspaces from "./buttons/Workspaces";
 
-const startWidget: Array<BarWidget> = [
-  "workspaces",
-];
-
-const centerWidget: Array<BarWidget> = [
-  "date",
-];
-
-const endWidget: Array<BarWidget> = [
-  "systray",
-  "system",
-];
+const { start, center, end } = options.bar.layout;
+const { position, transparent } = options.bar;
 
 export type BarWidget = keyof typeof widget;
 
@@ -48,22 +39,25 @@ export default (monitor: number) =>
     class_name: "bar",
     name: `bar${monitor}`,
     exclusivity: "exclusive",
-    anchor: ["top", "left", "right"],
+    anchor: position.bind().as(pos => [pos, "right", "left"]),
     child: Widget.CenterBox({
       css: "min-width: 2px; min-height: 2px;",
       startWidget: Widget.Box({
         hexpand: true,
-        children: startWidget.map(w => widget[w]()),
+        children: start.bind().as(ws => ws.map(w => widget[w]())),
       }),
       centerWidget: Widget.Box({
         hpack: "center",
-        children: centerWidget.map(w => widget[w]()),
+        children: center.bind().as(ws => ws.map(w => widget[w]())),
       }),
       endWidget: Widget.Box({
         hpack: "end",
         hexpand: true,
-        children: endWidget.map(w => widget[w]()),
+        children: end.bind().as(ws => ws.map(w => widget[w]())),
       }),
     }),
-    setup: self => self.toggleClassName("transparent", true),
+    setup: self =>
+      self.hook(transparent, () => {
+        self.toggleClassName("transparent", transparent.value);
+      }),
   });

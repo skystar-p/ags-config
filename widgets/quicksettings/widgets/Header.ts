@@ -36,7 +36,7 @@ export const Header = () =>
           children: [
             Widget.Icon({ icon: icons.ui.time }),
             Widget.Label({ label: uptime.bind().as(up) }),
-          ]
+          ],
         }),
       ],
     }),
