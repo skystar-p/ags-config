@@ -1,10 +1,10 @@
+import networkctl from "services/networkctl";
 import icons from "utils/icons";
 import PanelButton from "../PanelButton";
 
 const notifications = await Service.import("notifications");
 const bluetooth = await Service.import("bluetooth");
 const audio = await Service.import("audio");
-const network = await Service.import("network");
 
 const MicrophoneIndicator = () =>
   Widget.Icon()
@@ -41,11 +41,18 @@ const BluetoothIndicator = () =>
     }),
   });
 
-const NetworkIndicator = () =>
-  Widget.Icon().hook(network, self => {
-    const icon = network[network.primary || "wifi"]?.icon_name;
-    self.icon = icon || "";
-    self.visible = !!icon;
+const NetworkIndicatorV2 = () =>
+  Widget.Icon({
+    icon: networkctl.bind("status").as(status => {
+      switch (status) {
+        case "wired":
+          return "network-wired-symbolic";
+        case "wireless":
+          return "network-wireless-signal-excellent-symbolic";
+        default:
+          return "network-wireless-signal-none-symbolic";
+      }
+    }),
   });
 
 const AudioIndicator = () =>
@@ -66,7 +73,7 @@ export default () =>
     child: Widget.Box([
       DNDIndicator(),
       BluetoothIndicator(),
-      NetworkIndicator(),
+      NetworkIndicatorV2(),
       AudioIndicator(),
       MicrophoneIndicator(),
     ]),

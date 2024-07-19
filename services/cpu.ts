@@ -36,8 +36,7 @@ class CPU extends Service {
     }
 
     Utils.interval(interval.value, () => {
-      this.updateUsage();
-      this.notify("usage");
+      this.updateUsage().then(() => this.notify("usage"));
     });
   }
 }

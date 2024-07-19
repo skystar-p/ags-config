@@ -238,6 +238,10 @@ const options = mkOptions(OPTIONS, {
   memory: {
     interval: opt(2000),
   },
+
+  networkctl: {
+    interval: opt(5000),
+  },
 });
 
 globalThis["options"] = options;

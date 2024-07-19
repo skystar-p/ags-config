@@ -36,8 +36,7 @@ class Memory extends Service {
     }
 
     Utils.interval(interval.value, () => {
-      this.updateUsage();
-      this.notify("usage-kb");
+      this.updateUsage().then(() => this.notify("usage-kb"));
     });
   }
 }
