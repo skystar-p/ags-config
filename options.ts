@@ -80,9 +80,9 @@ const options = mkOptions(OPTIONS, {
         "expander",
         "cpu",
         "memory",
-        "systray",
         "system",
         "battery",
+        "systray",
       ]),
     },
     launcher: {
