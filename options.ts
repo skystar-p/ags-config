@@ -79,6 +79,7 @@ const options = mkOptions(OPTIONS, {
       end: opt<Array<import("widgets/bar/Bar").BarWidget>>([
         "expander",
         "cpu",
+        "memory",
         "systray",
         "system",
         "battery",
@@ -231,6 +232,10 @@ const options = mkOptions(OPTIONS, {
   },
 
   cpu: {
+    interval: opt(2000),
+  },
+
+  memory: {
     interval: opt(2000),
   },
 });

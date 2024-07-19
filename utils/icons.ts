@@ -137,7 +137,7 @@ export default {
   },
   system: {
     cpu: "cpu",
-    ram: "drive-harddisk-solidstate-symbolic",
+    memory: "memory",
     temp: "temperature-symbolic",
   },
   color: {

@@ -1,5 +1,6 @@
 import options from "options";
 import CPUUsage from "widgets/CPUUsage";
+import MemoryUsage from "widgets/MemoryUsage";
 import BatteryBar from "./buttons/BatteryBar";
 import Date from "./buttons/Date";
 import Messages from "./buttons/Messages";
@@ -20,6 +21,7 @@ const widget = {
   workspaces: Workspaces,
   messages: Messages,
   cpu: CPUUsage,
+  memory: MemoryUsage,
   expander: () => Widget.Box({ expand: true }),
 };
 
