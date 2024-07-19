@@ -1,12 +1,11 @@
+import options from "options";
 import { type MprisPlayer } from "types/service/mpris";
 import icons from "utils/icons";
 import { icon } from "utils/utils";
 
 const mpris = await Service.import("mpris");
 const players = mpris.bind("players");
-
-const coverSize = Variable(100);
-const monochromeIcon = Variable(false);
+const { media } = options.quicksettings;
 
 function lengthStr(length: number) {
   const min = Math.floor(length / 60);
@@ -22,7 +21,7 @@ const Player = (player: MprisPlayer) => {
     css: Utils.merge([
       player.bind("cover_path"),
       player.bind("track_cover_url"),
-      coverSize.bind(),
+      media.coverSize.bind(),
     ], (path, url, size) => `
             min-width: ${size}px;
             min-height: ${size}px;
@@ -88,7 +87,7 @@ const Player = (player: MprisPlayer) => {
     hpack: "end",
     vpack: "start",
     tooltip_text: player.identity || "",
-    icon: Utils.merge([player.bind("entry"), monochromeIcon.bind()], (e, s) => {
+    icon: Utils.merge([player.bind("entry"), media.monochromeIcon.bind()], (e, s) => {
       const name = `${e}${s ? "-symbolic" : ""}`;
       return icon(name, icons.fallback.audio);
     }),

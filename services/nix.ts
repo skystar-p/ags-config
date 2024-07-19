@@ -1,6 +1,6 @@
-import icons from "lib/icons";
-import { bash, dependencies } from "lib/utils";
 import options from "options";
+import icons from "utils/icons";
+import { bash, dependencies } from "utils/utils";
 
 const CACHE = `${Utils.CACHE_DIR}/nixpkgs`;
 const PREFIX = "legacyPackages.x86_64-linux.";

@@ -1,6 +1,6 @@
 import GLib from "gi://GLib";
-import icons from "lib/icons";
-import { bash, dependencies, sh } from "lib/utils";
+import icons from "utils/icons";
+import { bash, dependencies, sh } from "utils/utils";
 
 const now = () => GLib.DateTime.new_now_local().format("%Y-%m-%d_%H-%M-%S");
 

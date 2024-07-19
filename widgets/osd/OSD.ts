@@ -1,7 +1,7 @@
-import icons from "lib/icons";
-import { icon } from "lib/utils";
 import options from "options";
-import brightness from "service/brightness";
+import brightness from "services/brightness";
+import icons from "utils/icons";
+import { icon } from "utils/utils";
 import Progress from "./Progress";
 
 const audio = await Service.import("audio");

@@ -1,9 +1,9 @@
 import Gdk from "gi://Gdk";
 import Gtk from "gi://Gtk?version=3.0";
-import icons from "lib/icons";
-import { createSurfaceFromWidget, icon } from "lib/utils";
 import options from "options";
 import { type Client } from "types/service/hyprland";
+import icons from "utils/icons";
+import { createSurfaceFromWidget, icon } from "utils/utils";
 
 const monochrome = options.overview.monochromeIcon;
 const TARGET = [Gtk.TargetEntry.new("text/plain", Gtk.TargetFlags.SAME_APP, 0)];

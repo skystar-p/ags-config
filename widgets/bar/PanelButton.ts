@@ -1,3 +1,4 @@
+import options from "options";
 import { ButtonProps } from "types/widgets/button";
 
 type PanelButtonProps = ButtonProps & {
@@ -20,11 +21,9 @@ export default ({
       self.toggleClassName("panel-button");
       self.toggleClassName(window);
 
-      // self.hook(options.bar.flatButtons, () => {
-      //   self.toggleClassName("flat", flat ?? options.bar.flatButtons.value);
-      // });
-
-      self.toggleClassName("flat", flat ?? true);
+      self.hook(options.bar.flatButtons, () => {
+        self.toggleClassName("flat", flat ?? options.bar.flatButtons.value);
+      });
 
       self.hook(App, (_, win, visible) => {
         if (win !== window) {

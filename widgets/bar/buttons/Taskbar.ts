@@ -1,6 +1,6 @@
-import icons from "lib/icons";
-import { icon, launchApp } from "lib/utils";
 import options from "options";
+import icons from "utils/icons";
+import { icon, launchApp } from "utils/utils";
 import PanelButton from "../PanelButton";
 
 const hyprland = await Service.import("hyprland");

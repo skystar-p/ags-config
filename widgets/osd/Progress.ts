@@ -1,7 +1,7 @@
 import GLib from "gi://GLib?version=2.0";
 import type Gtk from "gi://Gtk?version=3.0";
-import { range } from "lib/utils";
 import options from "options";
+import { range } from "utils/utils";
 
 type ProgressProps = {
   height?: number;

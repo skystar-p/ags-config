@@ -1,5 +1,5 @@
-import { range } from "lib/utils";
 import options from "options";
+import { range } from "utils/utils";
 import PopupWindow from "widget/PopupWindow";
 import Workspace from "./Workspace";
 

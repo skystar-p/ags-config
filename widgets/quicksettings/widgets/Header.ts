@@ -31,13 +31,10 @@ export const Header = () =>
             Widget.Label({ label: battery.bind("percent").as(p => `${p}%`) }),
           ],
         }),
-        Widget.Box({
-          class_name: "uptime",
-          children: [
-            Widget.Icon({ icon: icons.ui.time }),
-            Widget.Label({ label: uptime.bind().as(up) }),
-          ],
-        }),
+        Widget.Box([
+          Widget.Icon({ icon: icons.ui.time }),
+          Widget.Label({ label: uptime.bind().as(up) }),
+        ]),
       ],
     }),
     Widget.Box({ hexpand: true }),

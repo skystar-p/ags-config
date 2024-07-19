@@ -1,5 +1,5 @@
-import icons from "lib/icons";
 import sh from "service/sh";
+import icons from "utils/icons";
 
 const iconVisible = Variable(false);
 

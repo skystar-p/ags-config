@@ -1,6 +1,6 @@
-import icons from "lib/icons.js";
-import { dependencies, sh } from "lib/utils";
 import options from "options";
+import icons from "utils/icons.js";
+import { dependencies, sh } from "utils/utils";
 import { ArrowToggleButton, Menu } from "../ToggleButton";
 const { wifi } = await Service.import("network");
 

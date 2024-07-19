@@ -1,5 +1,5 @@
-import icons from "lib/icons";
 import nix, { type Nixpkg } from "service/nix";
+import icons from "utils/icons";
 
 const iconVisible = Variable(false);
 

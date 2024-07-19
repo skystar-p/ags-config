@@ -1,5 +1,5 @@
-import icons from "lib/icons";
 import screenrecord from "service/screenrecord";
+import icons from "utils/icons";
 import PanelButton from "../PanelButton";
 
 export default () =>

@@ -1,6 +1,6 @@
 import Gdk from "gi://Gdk";
-import icons from "lib/icons";
-import { Opt } from "lib/option";
+import icons from "utils/icons";
+import { Opt } from "utils/options";
 import { type RowProps } from "./Row";
 
 function EnumSetter(opt: Opt<string>, values: string[]) {

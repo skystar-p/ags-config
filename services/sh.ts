@@ -1,7 +1,7 @@
 import GLib from "gi://GLib?version=2.0";
-import icons from "lib/icons";
-import { bash, dependencies } from "lib/utils";
 import options from "options";
+import icons from "utils/icons";
+import { bash, dependencies } from "utils/utils";
 
 const MAX = options.launcher.sh.max;
 const BINS = `${Utils.CACHE_DIR}/binaries`;

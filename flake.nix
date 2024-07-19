@@ -18,6 +18,8 @@
           esbuild
           dprint
           dart-sass
+          brightnessctl
+          matugen
         ];
       };
     }

@@ -1,4 +1,4 @@
-import icons from "lib/icons";
+import icons from "utils/icons";
 import { SimpleToggleButton } from "../ToggleButton";
 const { microphone } = await Service.import("audio");
 

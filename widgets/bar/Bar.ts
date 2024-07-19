@@ -13,7 +13,7 @@ import Taskbar from "./buttons/Taskbar";
 import Workspaces from "./buttons/Workspaces";
 
 const { start, center, end } = options.bar.layout;
-const { position, transparent } = options.bar;
+const { transparent, position } = options.bar;
 
 export type BarWidget = keyof typeof widget;
 
@@ -51,8 +51,8 @@ export default (monitor: number) =>
         children: center.bind().as(ws => ws.map(w => widget[w]())),
       }),
       endWidget: Widget.Box({
-        hpack: "end",
         hexpand: true,
+        hpack: "end",
         children: end.bind().as(ws => ws.map(w => widget[w]())),
       }),
     }),

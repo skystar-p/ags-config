@@ -1,7 +1,7 @@
-import icons from "lib/icons";
-import { icon, launchApp } from "lib/utils";
 import options from "options";
 import { type Application } from "types/service/applications";
+import icons from "utils/icons";
+import { icon, launchApp } from "utils/utils";
 
 const apps = await Service.import("applications");
 const { query } = apps;

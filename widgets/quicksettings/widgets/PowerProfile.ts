@@ -1,4 +1,4 @@
-import icons from "lib/icons";
+import icons from "utils/icons";
 import { ArrowToggleButton, Menu } from "../ToggleButton";
 
 import asusctl from "service/asusctl";

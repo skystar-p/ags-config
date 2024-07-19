@@ -1,4 +1,4 @@
-import { bash, dependencies, sh } from "lib/utils";
+import { bash, dependencies, sh } from "utils/utils";
 
 if (!dependencies("brightnessctl")) {
   App.quit();

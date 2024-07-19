@@ -1,5 +1,5 @@
-import icons from "lib/icons";
-import { bash, dependencies } from "lib/utils";
+import icons from "utils/icons";
+import { bash, dependencies } from "utils/utils";
 
 const COLORS_CACHE = Utils.CACHE_DIR + "/colorpicker.json";
 const MAX_NUM_COLORS = 10;

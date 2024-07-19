@@ -1,4 +1,4 @@
-import { sh } from "lib/utils";
+import { sh } from "utils/utils";
 
 type Profile = "Performance" | "Balanced" | "Quiet";
 type Mode = "Hybrid" | "Integrated";

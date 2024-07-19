@@ -1,5 +1,5 @@
-import icons from "lib/icons";
-import brightness from "service/brightness";
+import brightness from "services/brightness";
+import icons from "utils/icons";
 
 const BrightnessSlider = () =>
   Widget.Slider({

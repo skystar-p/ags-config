@@ -1,4 +1,4 @@
-import icons from "lib/icons";
+import icons from "utils/icons";
 import Row from "./Row";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

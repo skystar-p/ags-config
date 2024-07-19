@@ -1,8 +1,9 @@
+import options from "options";
 import { range, sh } from "utils/utils";
 import PanelButton from "../PanelButton";
 
 const hyprland = await Service.import("hyprland");
-const workspaces = 10;
+const { workspaces } = options.bar.workspaces;
 
 const dispatch = (arg: string | number) => {
   sh(`hyprctl dispatch workspace ${arg}`);
@@ -39,5 +40,5 @@ export default () =>
     on_scroll_up: () => dispatch("m-1"),
     on_scroll_down: () => dispatch("m+1"),
     on_clicked: () => App.toggleWindow("overview"),
-    child: Workspaces(workspaces),
+    child: workspaces.bind().as(Workspaces),
   });

@@ -66,7 +66,7 @@ const options = mkOptions(OPTIONS, {
     flatButtons: opt(true),
     position: opt<"top" | "bottom">("top"),
     corners: opt(50),
-    transparent: opt(false),
+    transparent: opt(true),
     layout: {
       start: opt<Array<import("widgets/bar/Bar").BarWidget>>([
         // "launcher",
@@ -113,7 +113,7 @@ const options = mkOptions(OPTIONS, {
       low: opt(30),
     },
     workspaces: {
-      workspaces: opt(7),
+      workspaces: opt(10),
     },
     taskbar: {
       iconSize: opt(0),
@@ -124,14 +124,11 @@ const options = mkOptions(OPTIONS, {
       action: opt(() => App.toggleWindow("datemenu")),
     },
     systray: {
-      ignore: opt([
-        "KDE Connect Indicator",
-        "spotify-client",
-      ]),
+      ignore: opt<string[]>([]),
     },
     media: {
       monochrome: opt(true),
-      preferred: opt("spotify"),
+      preferred: opt("Mozilla Firefox"),
       direction: opt<"left" | "right">("right"),
       format: opt("{artists} - {title}"),
       length: opt(40),

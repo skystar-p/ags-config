@@ -1,5 +1,5 @@
-import { matugen } from "lib/matugen";
 import options from "options";
+import { matugen } from "utils/matugen";
 const mpris = await Service.import("mpris");
 
 const pref = () => options.bar.media.preferred.value;
