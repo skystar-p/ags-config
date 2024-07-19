@@ -7,9 +7,9 @@ import Bar from "widgets/bar/Bar";
 import ScreenCorners from "widgets/bar/ScreenCorners";
 import { setupDateMenu } from "widgets/datemenu/DateMenu";
 import NotificationPopups from "widgets/notifications/NotificationPopups";
-import OSD from "widgets/osd/OSD";
+// import OSD from "widgets/osd/OSD";
 import Overview from "widgets/overview/Overview";
-import PowerMenu from "widgets/powermenu/PowerMenu";
+// import PowerMenu from "widgets/powermenu/PowerMenu";
 import Verification from "widgets/powermenu/Verification";
 import { setupQuickSettings } from "widgets/quicksettings/QuickSettings";
 import SettingsDialog from "widgets/settings/SettingsDialog";
@@ -29,7 +29,7 @@ App.config({
     ...forMonitors(Bar),
     ...forMonitors(NotificationPopups),
     ...forMonitors(ScreenCorners),
-    ...forMonitors(OSD),
+    // ...forMonitors(OSD),
     Overview(),
     // PowerMenu(),
     SettingsDialog(),

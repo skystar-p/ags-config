@@ -1,14 +1,10 @@
 import options from "options";
+import CPUUsage from "widgets/CPUUsage";
 import BatteryBar from "./buttons/BatteryBar";
-import ColorPicker from "./buttons/ColorPicker";
 import Date from "./buttons/Date";
-import Media from "./buttons/Media";
 import Messages from "./buttons/Messages";
-import PowerMenu from "./buttons/PowerMenu";
-import ScreenRecord from "./buttons/ScreenRecord";
 import SystemIndicators from "./buttons/SystemIndicators";
 import SysTray from "./buttons/SysTray";
-import Taskbar from "./buttons/Taskbar";
 import Workspaces from "./buttons/Workspaces";
 
 const { start, center, end } = options.bar.layout;
@@ -18,16 +14,12 @@ export type BarWidget = keyof typeof widget;
 
 const widget = {
   battery: BatteryBar,
-  // colorpicker: ColorPicker,
   date: Date,
-  media: Media,
-  // powermenu: PowerMenu,
   systray: SysTray,
   system: SystemIndicators,
-  // taskbar: Taskbar,
   workspaces: Workspaces,
-  // screenrecord: ScreenRecord,
   messages: Messages,
+  cpu: CPUUsage,
   expander: () => Widget.Box({ expand: true }),
 };
 

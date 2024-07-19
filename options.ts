@@ -69,9 +69,7 @@ const options = mkOptions(OPTIONS, {
     transparent: opt(true),
     layout: {
       start: opt<Array<import("widgets/bar/Bar").BarWidget>>([
-        // "launcher",
         "workspaces",
-        // "taskbar",
         "expander",
         "messages",
       ]),
@@ -79,14 +77,11 @@ const options = mkOptions(OPTIONS, {
         "date",
       ]),
       end: opt<Array<import("widgets/bar/Bar").BarWidget>>([
-        "media",
         "expander",
+        "cpu",
         "systray",
-        // "colorpicker",
-        // "screenrecord",
         "system",
         "battery",
-        // "powermenu",
       ]),
     },
     launcher: {
@@ -233,6 +228,10 @@ const options = mkOptions(OPTIONS, {
     gaps: opt(2.4),
     inactiveBorder: opt("#282828"),
     gapsWhenOnly: opt(false),
+  },
+
+  cpu: {
+    interval: opt(2000),
   },
 });
 

@@ -136,7 +136,7 @@ export default {
     next: "media-skip-forward-symbolic",
   },
   system: {
-    cpu: "org.gnome.SystemMonitor-symbolic",
+    cpu: "cpu",
     ram: "drive-harddisk-solidstate-symbolic",
     temp: "temperature-symbolic",
   },
