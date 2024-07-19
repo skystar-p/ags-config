@@ -67,7 +67,7 @@ $button-radius: $radius;
             }
 
             &.active {
-                // background-color: $primary-bg;
+                background-color: $primary-bg;
                 background-image: $active-gradient;
                 min-width: 20pt;
                 min-height: 12pt;
