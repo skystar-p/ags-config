@@ -19,6 +19,9 @@ export async function matugen(
   if (!options.autotheme.value || !dependencies("matugen")) {
     return;
   }
+  if (!arg) {
+    return;
+  }
 
   const colors = await sh(`matugen --dry-run -j hex ${type} ${arg}`);
   const c = JSON.parse(colors).colors as { light: Colors; dark: Colors };

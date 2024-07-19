@@ -11,10 +11,6 @@ export default () =>
         label: "Wallpaper",
         vpack: "start",
       }),
-      Widget.Button({
-        on_clicked: wallpaper.random,
-        label: "Random",
-      }),
       Widget.FileChooserButton({
         on_file_set: ({ uri }) => wallpaper.set(uri!.replace("file://", "")),
       }),
