@@ -1,5 +1,5 @@
 import options from "options";
-import { type Application } from "types/service/applications";
+import { type Application } from "types/services/applications";
 import icons from "utils/icons";
 import { icon, launchApp } from "utils/utils";
 

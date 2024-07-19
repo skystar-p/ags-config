@@ -1,6 +1,6 @@
 import Gdk from "gi://Gdk";
 import options from "options";
-import { type TrayItem } from "types/service/systemtray";
+import { type TrayItem } from "types/services/systemtray";
 import PanelButton from "../PanelButton";
 
 const systemtray = await Service.import("systemtray");

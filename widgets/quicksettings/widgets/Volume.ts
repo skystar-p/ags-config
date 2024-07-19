@@ -1,4 +1,4 @@
-import { type Stream } from "types/service/audio";
+import { type Stream } from "types/services/audio";
 import icons from "utils/icons.js";
 import { dependencies, icon, sh } from "utils/utils";
 import { Arrow, Menu } from "../ToggleButton";

@@ -1,5 +1,5 @@
 import options from "options";
-import { type MprisPlayer } from "types/service/mpris";
+import { type MprisPlayer } from "types/services/mpris";
 import icons from "utils/icons";
 import { icon } from "utils/utils";
 

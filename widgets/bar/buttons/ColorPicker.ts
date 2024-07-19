@@ -1,5 +1,5 @@
 import Gdk from "gi://Gdk";
-import colorpicker from "service/colorpicker";
+import colorpicker from "services/colorpicker";
 import PanelButton from "../PanelButton";
 
 const css = (color: string) => `

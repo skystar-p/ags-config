@@ -1,8 +1,8 @@
 import options from "options";
-import nix from "service/nix";
+import nix from "services/nix";
 import icons from "utils/icons";
 import { type Binding } from "utils/utils";
-import PopupWindow, { Padding } from "widget/PopupWindow";
+import PopupWindow, { Padding } from "widgets/PopupWindow";
 import * as AppLauncher from "./AppLauncher";
 import * as NixRun from "./NixRun";
 import * as ShRun from "./ShRun";

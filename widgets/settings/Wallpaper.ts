@@ -1,4 +1,4 @@
-import wallpaper from "service/wallpaper";
+import wallpaper from "services/wallpaper";
 
 export default () =>
   Widget.Box(

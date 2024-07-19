@@ -1,4 +1,5 @@
 import options from "options";
+import { CpuGraph, MemGraph } from "widgets/Graph";
 import BatteryBar from "./buttons/BatteryBar";
 import ColorPicker from "./buttons/ColorPicker";
 import Date from "./buttons/Date";

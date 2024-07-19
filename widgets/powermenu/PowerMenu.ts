@@ -1,8 +1,8 @@
 import type Gtk from "gi://Gtk?version=3.0";
 import options from "options";
-import powermenu, { type Action } from "service/powermenu";
+import powermenu, { type Action } from "services/powermenu";
 import icons from "utils/icons";
-import PopupWindow from "widget/PopupWindow";
+import PopupWindow from "widgets/PopupWindow";
 
 const { layout, labels } = options.powermenu;
 

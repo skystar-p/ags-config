@@ -1,7 +1,7 @@
 import Gdk from "gi://Gdk";
 import Gtk from "gi://Gtk?version=3.0";
 import options from "options";
-import { type Client } from "types/service/hyprland";
+import { type Client } from "types/services/hyprland";
 import icons from "utils/icons";
 import { createSurfaceFromWidget, icon } from "utils/utils";
 

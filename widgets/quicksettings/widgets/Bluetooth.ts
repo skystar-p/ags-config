@@ -1,4 +1,4 @@
-import { type BluetoothDevice } from "types/service/bluetooth";
+import { type BluetoothDevice } from "types/services/bluetooth";
 import icons from "utils/icons";
 import { ArrowToggleButton, Menu } from "../ToggleButton";
 

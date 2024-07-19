@@ -1,7 +1,7 @@
 import icons from "utils/icons";
 import { ArrowToggleButton, Menu } from "../ToggleButton";
 
-import asusctl from "service/asusctl";
+import asusctl from "services/asusctl";
 const asusprof = asusctl.bind("profile");
 
 const AsusProfileToggle = () =>

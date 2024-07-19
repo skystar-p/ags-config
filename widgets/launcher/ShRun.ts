@@ -1,4 +1,4 @@
-import sh from "service/sh";
+import sh from "services/sh";
 import icons from "utils/icons";
 
 const iconVisible = Variable(false);

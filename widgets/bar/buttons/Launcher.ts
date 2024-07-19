@@ -1,5 +1,5 @@
 import options from "options";
-import nix from "service/nix";
+import nix from "services/nix";
 import PanelButton from "../PanelButton";
 
 const { icon, label, action } = options.bar.launcher;

@@ -1,6 +1,6 @@
 import options from "options";
 import icons from "utils/icons";
-import RegularWindow from "widget/RegularWindow";
+import RegularWindow from "widgets/RegularWindow";
 import layout from "./layout";
 
 const current = Variable(layout[0].attribute.name);

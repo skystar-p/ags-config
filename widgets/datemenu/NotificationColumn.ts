@@ -1,5 +1,5 @@
 import options from "options";
-import { type Notification as Notif } from "types/service/notifications";
+import { type Notification as Notif } from "types/services/notifications";
 import icons from "utils/icons";
 import Notification from "widgets/notifications/Notification";
 
