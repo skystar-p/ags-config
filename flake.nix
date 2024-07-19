@@ -11,6 +11,9 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
+      packages = {
+        default = (pkgs.callPackage (import ./default.nix) { });
+      };
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
           nodejs
