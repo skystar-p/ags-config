@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean" : "rm -rf ./dist",
-    "build": "bun build ./config.js --external \"resource://*\" --external \"gi://*\" --external \"file://*\" --outfile dist/main.js",
-    "build-css": "bun run ./style/print-style.ts > ./style/varaibles.scss && cd style && dart-sass main.scss ../dist/main.css",
+    "build": "esbuild --bundle ./config.js --format=esm --outfile=dist/main.js --external:\"resource://*\" --external:\"gi://*\" --external:\"file://*\"",
+    "build-css": "esbuild --bundle ./style/print-style.ts --format=esm --outfile=/tmp/print-style.js && node /tmp/print-style.js > ./style/varaibles.scss && cd style && dart-sass main.scss ../dist/main.css",
     "run": "npm run build && ags -c ./dist/main.js"
   },
   "keywords": [],

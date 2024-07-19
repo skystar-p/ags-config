@@ -15,7 +15,7 @@
         buildInputs = with pkgs; [
           nodejs
           pnpm
-          bun
+          esbuild
           dprint
           dart-sass
         ];
