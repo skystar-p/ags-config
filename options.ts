@@ -1,5 +1,5 @@
 import icons from "utils/icons";
-import { mkOptions, opt } from "utils/option";
+import { mkOptions, opt } from "utils/options";
 import { icon } from "utils/utils";
 import { distro } from "utils/variables";
 
@@ -7,8 +7,8 @@ const options = mkOptions(OPTIONS, {
   autotheme: opt(false),
 
   wallpaper: {
-    resolution: opt<import("service/wallpaper").Resolution>(1920),
-    market: opt<import("service/wallpaper").Market>("random"),
+    resolution: opt<import("services/wallpaper").Resolution>(1920),
+    market: opt<import("services/wallpaper").Market>("random"),
   },
 
   theme: {
@@ -68,25 +68,25 @@ const options = mkOptions(OPTIONS, {
     corners: opt(50),
     transparent: opt(false),
     layout: {
-      start: opt<Array<import("widget/bar/Bar").BarWidget>>([
-        "launcher",
+      start: opt<Array<import("widgets/bar/Bar").BarWidget>>([
+        // "launcher",
         "workspaces",
-        "taskbar",
-        "expander",
+        // "taskbar",
+        // "expander",
         "messages",
       ]),
-      center: opt<Array<import("widget/bar/Bar").BarWidget>>([
+      center: opt<Array<import("widgets/bar/Bar").BarWidget>>([
         "date",
       ]),
-      end: opt<Array<import("widget/bar/Bar").BarWidget>>([
-        "media",
-        "expander",
+      end: opt<Array<import("widgets/bar/Bar").BarWidget>>([
+        // "media",
+        // "expander",
         "systray",
-        "colorpicker",
-        "screenrecord",
+        // "colorpicker",
+        // "screenrecord",
         "system",
-        "battery",
-        "powermenu",
+        // "battery",
+        // "powermenu",
       ]),
     },
     launcher: {

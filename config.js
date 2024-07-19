@@ -1,4 +1,4 @@
-const main = "/tmp/asztal/main.js";
+const main = "/tmp/ags-skystar/main.js";
 const entry = `${App.configDir}/main.ts`;
 
 try {

@@ -1,5 +1,5 @@
-import { dependencies, sh } from "lib/utils";
 import options from "options";
+import { dependencies, sh } from "utils/utils";
 
 export type Resolution = 1920 | 1366 | 3840;
 export type Market =
