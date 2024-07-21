@@ -4,7 +4,7 @@ import { icon } from "utils/utils";
 import { distro } from "utils/variables";
 
 const options = mkOptions(OPTIONS, {
-  autotheme: opt(false),
+  autotheme: opt(true),
 
   wallpaper: {
     resolution: opt<import("services/wallpaper").Resolution>(1920),
