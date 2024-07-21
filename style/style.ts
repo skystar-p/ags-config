@@ -103,7 +103,7 @@ async function resetCss() {
     const css = `${TMP}/main.css`;
 
     const fd = await bash(`fd ".scss" ${App.configDir}`);
-    const files = fd.split(/\s+/).filter(f => !f.includes("variables.scss"));
+    const files = fd.split(/\s+/).filter(f => !f.includes("variables.scss") && !f.includes("main.scss"));
     const imports = [vars, ...files].map(f => `@import '${f}';`);
 
     await Utils.writeFile(variables().join("\n"), vars);
