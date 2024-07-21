@@ -59,7 +59,7 @@ const options = mkOptions(OPTIONS, {
 
   font: {
     size: opt(13),
-    name: opt("Ubuntu Nerd Font"),
+    name: opt("Mononoki Nerd Font"),
   },
 
   bar: {
