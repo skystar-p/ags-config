@@ -245,7 +245,7 @@ $button-radius: $radius;
 
         &:not(:hover):not(.active) {
             >* {
-                background-color: transparentize($bg, 0.75);
+                background-color: transparentize($bg, 0.5);
             }
 
             label,
