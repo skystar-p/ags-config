@@ -6,11 +6,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1721374914,
-        "narHash": "sha256-IyqD+2zwQUVMn9qZPSIS9Aid4lpp13YtAW3+G6dSGgA=",
+        "lastModified": 1721729369,
+        "narHash": "sha256-2xgtDvQPl7yJAijLyX3x6RgtKSxqKCwauWsF3v/t5t0=",
         "owner": "skystar-p",
         "repo": "ags",
-        "rev": "63c1a7266495fc1539464a7a820752319612753b",
+        "rev": "95ccb7485b78f551b7f0533e3d6d64aa215b4da3",
         "type": "github"
       },
       "original": {
