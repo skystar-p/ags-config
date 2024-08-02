@@ -2,6 +2,17 @@ import options from "options";
 
 const { interval } = options.networkctl;
 
+const filterOut = [
+  "no-carrier",
+  "degraded-carrier",
+  "configuring",
+  "dormant",
+  "off",
+  "missing",
+  "pending",
+  "failed",
+];
+
 class NetworkCtl extends Service {
   static {
     Service.register(this, {}, {
@@ -18,6 +29,7 @@ class NetworkCtl extends Service {
     // split with line
     let lines = output.split("\n")
       .filter(line => line.includes("ether") || line.includes("wlan"))
+      .filter(line => !filterOut.some(filter => line.includes(filter)))
       .filter(line => line.includes("routable") || line.includes("carrier"));
 
     if (lines.length === 0) {
