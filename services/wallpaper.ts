@@ -32,7 +32,7 @@ class Wallpaper extends Service {
         "swww",
         "img",
         "--resize",
-        "fit",
+        "crop",
         "--invert-y",
         "--transition-type",
         "grow",
