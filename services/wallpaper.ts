@@ -31,6 +31,8 @@ class Wallpaper extends Service {
       sh([
         "swww",
         "img",
+        "--resize",
+        "fit",
         "--invert-y",
         "--transition-type",
         "grow",
